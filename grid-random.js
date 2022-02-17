@@ -24,9 +24,10 @@ const sketch = ({ width, height }) => {
   }
 
   // Get N% of full grid
-  const points = createGrid().filter(() => Math.random() > 0.5)
+  const points = createGrid().filter(() => Math.random() > 0.9)
 
   return ({ context, width, height }) => {
+    // solid background
     context.fillStyle = "#cc8080"
     context.fillRect(0, 0, width, height)
 
@@ -35,7 +36,7 @@ const sketch = ({ width, height }) => {
       const y = lerp(margin, height - margin, v)
 
       context.beginPath()
-      context.arc(x, y, tileSize * 0.5, 0, Math.PI * 2)
+      context.arc(x, y, tileSize * 0.9, 0, Math.PI * 2)
       context.fillStyle = "#fff"
       context.fill()
     })
