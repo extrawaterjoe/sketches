@@ -14,7 +14,7 @@ const sketch = () => {
     context.fillStyle = "hsl(0, 0%, 98%)"
     context.fillRect(0, 0, width, height)
 
-    // variable named gradient that creates a radial gradient that is centered on the canvas
+    // creates a radial gradient that is centered on the canvas
     const gradient = context.createRadialGradient(
       width * 0.5,
       height * 0.5,
