@@ -25,7 +25,6 @@ const sketch = () => {
     )
 
     // add 3 color stops to the gradient
-    gradient.addColorStop(0, "#38369A")
     gradient.addColorStop(0.3, "#7CA5B8")
     gradient.addColorStop(0.8, "#38369A")
     gradient.addColorStop(1, "#C6EBBE")
