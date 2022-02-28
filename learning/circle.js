@@ -19,11 +19,21 @@ const sketch = () => {
 
     context.beginPath()
     context.arc(width / 2, height / 2, 500, 0, Math.PI * 2)
-    context.fillStyle = "rgb(0, 0, 255)"
+
+    // animated slowly chanhge the color
+    const time = Date.now() * 0.001
+    const r = Math.sin(time * 0.3) * 0.3 + 0.5
+    const g = Math.sin(time * 0.5) * 0.4 + 0.5
+    const b = Math.sin(time * 0.7) * 0.5 + 0.5
+    context.fillStyle = `rgb(${r * 255}, ${g * 255}, ${b * 255})`
     context.fill()
 
     context.lineWidth = (Math.sin(Date.now() / 1000) * width) / 30 + width / 30
-    context.strokeStyle = "rgb(0, 0, 128)"
+    context.strokeStyle = `rgb(${r * 105}, ${g * 115}, ${b * 150})`
+    context.stroke()
+
+    context.lineWidth = (Math.sin(Date.now() / 1001) * width) / 50 + width / 50
+    context.strokeStyle = `rgb(${r * 205}, ${g * 215}, ${b * 250})`
     context.stroke()
   }
 }
