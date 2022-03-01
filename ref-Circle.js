@@ -14,6 +14,7 @@ const settings = {
 
 const sketch = () => {
   return ({ context, width, height }) => {
+    context.filter = "blur(20px)"
     context.fillStyle = "rgb(255, 255, 240)"
     context.fillRect(0, 0, width, height)
 
@@ -29,7 +30,7 @@ const sketch = () => {
     context.fill()
 
     context.lineWidth = (Math.sin(Date.now() / 1000) * width) / 30 + width / 30
-    context.strokeStyle = `rgb(${r * 105}, ${g * 115}, ${b * 150})`
+    context.strokeStyle = `rgb(${r * 155}, ${g * 195}, ${b * 200})`
     context.stroke()
 
     context.lineWidth = (Math.sin(Date.now() / 1001) * width) / 50 + width / 50
